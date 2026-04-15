@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeltrax Team | Esports</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-link">
+                <h2>ZELTRAX</h2>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-item active">Accueil</a>
+                <a href="#players" class="nav-item">Joueurs</a>
+                <a href="#tournaments" class="nav-item">Tournois</a>
+                <a href="#shop" class="nav-item">Boutique</a>
+                <a href="#support" class="nav-item">Support</a>
+            </div>
+            <div class="menu-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- HOME SECTION -->
+        <section id="home" class="page-section active-page">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="glitch" data-title="ZELTRAX TEAM">ZELTRAX TEAM</h1>
+                    <p class="tagline">Dominez le jeu. Forgez la légende.</p>
+                    <button class="btn btn-primary" onclick="navigateTo('tournaments')">Nos Tournois <i data-lucide="crosshair"></i></button>
+                </div>
+            </div>
+            <div class="news-highlight">
+                <div class="container">
+                    <h2 class="section-title">Actualités Récentes</h2>
+                    <div class="news-grid">
+                        <div class="news-card">
+                            <div class="news-image news-bg-1"></div>
+                            <div class="news-info">
+                                <h3>Victoire au Championnat National</h3>
+                                <p>Zeltrax Team remporte la grande finale avec un score parfait.</p>
+                                <a href="#" class="read-more">Lire la suite</a>
+                            </div>
+                        </div>
+                        <div class="news-card">
+                            <div class="news-image news-bg-2"></div>
+                            <div class="news-info">
+                                <h3>Nouveau Roster Annoncé</h3>
+                                <p>Découvrez les nouveaux talents qui rejoignent nos rangs.</p>
+                                <a href="#" class="read-more">Lire la suite</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLAYERS SECTION -->
+        <section id="players" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Nos Champions</h2>
+                <div class="players-grid">
+                    <div class="player-card" onclick="openPlayerModal('NEGO \'LWA3ER\'', 'Capitaine / IGL', 'K/D: 1.45 | Winrate: 68%', 'image/player1.png')">
+                        <div class="player-img-wrapper" style="background-image: url('image/player1.png');"></div>
+                        <div class="player-info">
+                            <h3>NEGO</h3>
+                            <span class="role">Capitaine / IGL</span>
+                        </div>
+                    </div>
+                    <div class="player-card" onclick="openPlayerModal('BALAGOS \'VIPER\'', 'Sniper', 'K/D: 1.82 | Winrate: 71%', '')">
+                        <div class="player-img-wrapper player-placeholder"></div>
+                        <div class="player-info">
+                            <h3>BALAGOS</h3>
+                            <span class="role">PUSHER</span>
+                        </div>
+                    </div>
+                    <div class="player-card" onclick="openPlayerModal('MARCO \'Volt\'', 'Support', 'K/A/D: 15/45/10 | Winrate: 65%', '')">
+                        <div class="player-img-wrapper player-placeholder"></div>
+                        <div class="player-info">
+                            <h3>MARCO</h3>
+                            <span class="role">Support</span>
+                            </div>
+                    </div>
+                    <div class="player-card" onclick="openPlayerModal('PATRON \'W3\'', 'Sniper', 'K/D: 1.82 | Winrate: 71%', '')">
+                        <div class="player-img-wrapper player-placeholder"></div>
+                        <div class="player-info">
+                            <h3>PATRON</h3>
+                            <span class="role">PUSHER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOURNAMENTS SECTION -->
+        <section id="tournaments" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Tournois</h2>
+                <div class="tournament-list">
+                    <div class="tournament-card">
+                        <div class="t-details">
+                            <h3>Zeltrax Open Cup #4</h3>
+                            <p class="t-date"><i data-lucide="calendar"></i> 15 Mai 2026</p>
+                            <p class="t-game"><i data-lucide="gamepad-2"></i> FREE FIRE</p>
+                        </div>
+                        <div class="t-action">
+                            <button class="btn btn-outline" onclick="openTourneyModal('Zeltrax Open Cup #4')">S'inscrire</button>
+                        </div>
+                    </div>
+                    <div class="tournament-card past-tournament">
+                        <div class="t-details">
+                            <h3>Ligue des Champions - Saison 12</h3>
+                            <p class="t-date"><i data-lucide="calendar"></i> 02 Mars 2026</p>
+                            <p class="t-game"><i data-lucide="gamepad-2"></i> CS2</p>
+                        </div>
+                        <div class="t-action">
+                             <span class="status-badge">Terminé - 1ère Place 🏆</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP SECTION -->
+        <section id="shop" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Boutique Officielle</h2>
+                <div class="shop-grid">
+                    <div class="product-card">
+                        <div class="product-img" style="background-image: url('image/tshirt.png');"></div>
+                        <div class="product-info">
+                            <h3>Maillot Officiel </h3>
+                            <p class="price">99.99 DH</p>
+                            <button class="btn btn-primary buy-btn" onclick="addToCart('Maillot Officiel', 99.99)">Acheter</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img" style="background-image: url('image/hoodie.png');"></div>
+                        <div class="product-info">
+                            <h3>Hoodie Zeltrax</h3>
+                            <p class="price">199.00 DH</p>
+                            <button class="btn btn-primary buy-btn" onclick="addToCart('Hoodie Zeltrax', 199)">Acheter</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img merch-placeholder-3"></div>
+                        <div class="product-info">
+                            <h3>Tapis de Souris XXL</h3>
+                            <p class="price">290.99 DH</p>
+                            <button class="btn btn-primary buy-btn" onclick="addToCart('Tapis XXL', 290.99)">Acheter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUPPORT SECTION -->
+        <section id="support" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Contact & Support</h2>
+                <div class="support-wrapper">
+                    <form class="contact-form" onsubmit="handleContact(event)">
+                        <div class="form-group">
+                            <label>Nom</label>
+                            <input type="text" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required placeholder="Votre email">
+                        </div>
+                        <div class="form-group">
+                            <label>Sujet</label>
+                            <input type="text" required placeholder="Sujet de votre message">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" required placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Envoyer le message</button>
+                    </form>
+                    <div class="social-links-area">
+                        <h3>Rejoignez la communauté Zeltrax</h3>
+                        <p style="margin-bottom: 2rem; color: #a0a0a0;">Suivez-nous sur les réseaux pour ne rien rater de nos actualités et événements.</p>
+                        <div class="social-grid">
+                            <a href="#" class="social-btn"><i data-lucide="message-square"></i> Discord</a>
+                            <a href="#" class="social-btn"><i data-lucide="twitter"></i> Twitter</a>
+                            <a href="#" class="social-btn"><i data-lucide="youtube"></i> YouTube</a>
+                            <a href="#" class="social-btn"><i data-lucide="twitch"></i> Twitch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <h3 style="font-family: 'Orbitron', sans-serif; color: var(--primary); margin-bottom: 1rem;">ZELTRAX TEAM</h3>
+            <p>&copy; 2026 Zeltrax Team. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="tourney-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('tourney-modal')">&times;</span>
+            <div class="modal-header-accent"></div>
+            <h2 id="modal-t-title">Inscription Tournoi</h2>
+            <form id="t-form" class="modal-form" onsubmit="handleRegistration(event)">
+                <div class="form-group">
+                    <label>Nom / Pseudo</label>
+                    <input type="text" required placeholder="Ex: PlayerOne">
+                </div>
+                <div class="form-group">
+                    <label>Email de contact</label>
+                    <input type="email" required placeholder="contact@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Nom de l'équipe (Optionnel)</label>
+                    <input type="text" placeholder="Votre équipe">
+                </div>
+                <button class="btn btn-primary w-100 mt-2" type="submit">Confirmer l'inscription</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Player Profile Modal -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content player-modal-content">
+            <span class="close-btn" onclick="closeModal('player-modal')">&times;</span>
+            <div class="p-modal-header" id="p-modal-header-bg">
+                <div class="p-modal-header-overlay">
+                    <h2 id="p-name">Nom du Joueur</h2>
+                    <span id="p-role" class="role-badge">Role</span>
+                </div>
+            </div>
+            <div class="p-modal-body">
+                <div class="stats-box">
+                    <h4>Statistiques Clés</h4>
+                    <p id="p-stats" class="highlight-stats">Stats...</p>
+                </div>
+                <div class="p-bio">
+                     <h4>À propos</h4>
+                    <p>Membre clé de Zeltrax Team, apportant une expertise tactique et des réflexes hors du commun sur le terrain. Toujours prêt à mener l'équipe vers la victoire.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      // Initialize icons
+      lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
